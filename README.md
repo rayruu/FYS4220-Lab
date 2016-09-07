@@ -258,5 +258,11 @@ begin
     end process stimuli_process;
 end architecture testbench;
 ```
+<picture>
+    <source srcset="/pic/part1b1.png" media="(max-width: 768px)">
+    <source srcset="/pic/part1b1.png">
+    <img srcset="/pic/part1b1.png" alt="My default image">
+</picture>
+
 
 ![part1b1](/pic/part1b1.png)
