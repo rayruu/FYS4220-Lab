@@ -259,4 +259,4 @@ begin
 end architecture testbench;
 ```
 
-![part1b1](/pic/part1b1.png)
+![part1b1](http://imgur.com/QsU1nOv)
