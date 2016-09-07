@@ -7,7 +7,7 @@
 Given task in lab 1:
 #### a) Switches and LEDs
 
-- [ ] Create a new Quartus project
+- [x] Create a new Quartus project
 - [ ] Create a new VHDL file
 - [ ] Create tcl scripting file and make pin assignments
 - [ ] Create and import pin settings
