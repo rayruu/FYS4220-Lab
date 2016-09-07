@@ -268,7 +268,7 @@ end architecture testbench;
  
  Picture below show simulated values. (Click on picture to get better view.)
  
-![part1b1](http://i.imgur.com/QsU1nOv.png)
+![part1b1](http://i.imgur.com/PbxtsdQ.png)
 
 - Uploaded the program to FPGA.
 - Had some adjusting with typo mistakes. Like 7-segment indicated 2 when switch: "0101" supposed to be 5.
