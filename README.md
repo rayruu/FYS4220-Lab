@@ -17,9 +17,9 @@ Given task in lab 1:
 #### b) 7 - segment decoder with functional simulation
 
 - [x] Preparing the project
-- [ ] Simulate the design
-- [ ] Program the FPGA
-- [ ] Update the git repository
+- [x] Simulate the design
+- [x] Program the FPGA
+- [x] Update the git repository
 
 ### Part 2. Synchronous process
 
@@ -114,35 +114,31 @@ begin
   
 --------------------------------------------------------------------
 -- Source: 12.7 BCD to 7-Segment Decoder - Data-Flow Model
+-- With some changes
 --------------------------------------------------------------------
--- BCD to 7-Segment Decoder: Implemented as combinatorial circuit.
--- Outputs are active low; Hex outputs are included. The HEX0 format
--- is ABCDEFG (segA, segB etc.)
---
 -- Required signals:
 --------------------------------------------------------------------
 -- SW: in std_logic_vector(3 downto 0);
 -- HEX0: out std_logic_vector(6 downto 0);
 --------------------------------------------------------------------
 	with SW(3 downto 0) select
-		HEX0 <= "0000001" when "0000",	 -- 0
-				"1001111" when "0001",	 -- 1
-				"0010010" when "0010",	 -- 2
-				"0000110" when "0011",	 -- 3
-				"1001100" when "0100",	 -- 4
-				"0100100" when "0101",	 -- 5
-				"0100000" when "0110",	 -- 6
-				"0001111" when "0111",	 -- 7
+		HEX0 <= "1000000" when "0000",	 -- 0
+				"1111001" when "0001",	 -- 1
+				"0100100" when "0010",	 -- 2
+				"0110000" when "0011",	 -- 3
+				"0011001" when "0100",	 -- 4
+				"0010010" when "0101",	 -- 5
+				"0000010" when "0110",	 -- 6
+				"1111000" when "0111",	 -- 7
 				"0000000" when "1000",	 -- 8
-				"0000100" when "1001",	 -- 9
+				"0010000" when "1001",	 -- 9
 				"0001000" when "1010",	 -- A
-				"1100000" when "1011",	 -- B
-				"0110001" when "1100",	 -- C
-				"1000010" when "1101",	 -- D
-				"0110000" when "1110",	 -- E
-				"0111000" when "1111",	 -- F
+				"0000011" when "1011",	 -- b
+				"1000110" when "1100",	 -- C
+				"0100001" when "1101",	 -- d
+				"0000110" when "1110",	 -- E
+				"0001110" when "1111",	 -- F
 				"1111111" when others; -- turn off all LEDs
-
 end architecture top_level;
 ```
 
@@ -189,6 +185,7 @@ set_global_assignment -name RESERVE_ALL_UNUSED_PINS "AS INPUT TRI-STATED"
 We will simulate the updated program by creating a test bench design:
  - Test bench file is created under: hdl/tb
 Filename:	tb_lab1.
+
 ```
 library ieee;
 use ieee.std_logic_1164.all;
@@ -259,4 +256,23 @@ begin
 end architecture testbench;
 ```
 
+ - Simulating vhdl-files using Modelsim-Altera
+ - Uploading vhdl-files by following Lab1 guide.
+ - Compiling selected file (Compile -> Compile Selected)
+ - NB: Compile them in correct order: lab1.vhd then tb_lab1.vhd
+
+ - To start simulation (Simulate -> Start Simulate) and chose tb_lab1.vhd
+ - Mark LED, hold in shift and select HEX0.
+ - Right click on selected and add wave. Wave window will pop up with parameters LED, SW and HEX0. 
+ - Then Simulate by: Simulate -> Run -> Run-all
+ 
+ Picture below show simulated values. (Click on picture to get better view.)
+ 
 ![part1b1](http://i.imgur.com/QsU1nOv.png)
+
+- Uploaded the program to FPGA.
+- Had some adjusting with typo mistakes. Like 7-segment indicated 2 when switch: "0101" supposed to be 5.
+
+
+
+

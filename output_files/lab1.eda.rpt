@@ -1,5 +1,5 @@
 EDA Netlist Writer report for lab1
-Wed Sep 07 16:23:27 2016
+Wed Sep 07 18:06:23 2016
 Quartus Prime Version 16.0.0 Build 211 04/27/2016 SJ Lite Edition
 
 
@@ -37,7 +37,7 @@ agreement for further details.
 +-------------------------------------------------------------------+
 ; EDA Netlist Writer Summary                                        ;
 +---------------------------+---------------------------------------+
-; EDA Netlist Writer Status ; Successful - Wed Sep 07 16:23:27 2016 ;
+; EDA Netlist Writer Status ; Successful - Wed Sep 07 18:06:23 2016 ;
 ; Revision Name             ; lab1                                  ;
 ; Top-level Entity Name     ; lab1                                  ;
 ; Family                    ; Cyclone V                             ;
@@ -82,13 +82,13 @@ agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus Prime EDA Netlist Writer
     Info: Version 16.0.0 Build 211 04/27/2016 SJ Lite Edition
-    Info: Processing started: Wed Sep 07 16:23:25 2016
+    Info: Processing started: Wed Sep 07 18:06:21 2016
 Info: Command: quartus_eda --read_settings_files=off --write_settings_files=off fys4220 -c lab1
 Warning (10905): Generated the EDA functional simulation netlist because it is the only supported netlist type for this device.
 Info (204019): Generated file lab1.vho in folder "M:/pc/Dokumenter/FYS4220/fys4220-personal/simulation/modelsim/" for EDA simulation tool
 Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 1 warning
     Info: Peak virtual memory: 790 megabytes
-    Info: Processing ended: Wed Sep 07 16:23:27 2016
+    Info: Processing ended: Wed Sep 07 18:06:23 2016
     Info: Elapsed time: 00:00:02
     Info: Total CPU time (on all processors): 00:00:01
 

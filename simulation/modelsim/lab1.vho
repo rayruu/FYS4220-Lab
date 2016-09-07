@@ -17,7 +17,7 @@
 -- PROGRAM "Quartus Prime"
 -- VERSION "Version 16.0.0 Build 211 04/27/2016 SJ Lite Edition"
 
--- DATE "09/07/2016 16:23:27"
+-- DATE "09/07/2016 18:06:23"
 
 -- 
 -- Device: Altera 5CSEMA5F31C6 Package FBGA896
@@ -107,7 +107,7 @@ SIGNAL \ALT_INV_SW[3]~input_o\ : std_logic;
 SIGNAL \ALT_INV_SW[2]~input_o\ : std_logic;
 SIGNAL \ALT_INV_SW[1]~input_o\ : std_logic;
 SIGNAL \ALT_INV_SW[0]~input_o\ : std_logic;
-SIGNAL \ALT_INV_Mux6~0_combout\ : std_logic;
+SIGNAL \ALT_INV_Mux0~0_combout\ : std_logic;
 
 BEGIN
 
@@ -121,7 +121,7 @@ ww_devpor <= devpor;
 \ALT_INV_SW[2]~input_o\ <= NOT \SW[2]~input_o\;
 \ALT_INV_SW[1]~input_o\ <= NOT \SW[1]~input_o\;
 \ALT_INV_SW[0]~input_o\ <= NOT \SW[0]~input_o\;
-\ALT_INV_Mux6~0_combout\ <= NOT \Mux6~0_combout\;
+\ALT_INV_Mux0~0_combout\ <= NOT \Mux0~0_combout\;
 
 -- Location: IOOBUF_X52_Y0_N2
 \LED[0]~output\ : cyclonev_io_obuf
@@ -262,7 +262,7 @@ GENERIC MAP (
 	shift_series_termination_control => "false")
 -- pragma translate_on
 PORT MAP (
-	i => \ALT_INV_Mux6~0_combout\,
+	i => \Mux6~0_combout\,
 	devoe => ww_devoe,
 	o => ww_HEX0(0));
 
@@ -340,7 +340,7 @@ GENERIC MAP (
 	shift_series_termination_control => "false")
 -- pragma translate_on
 PORT MAP (
-	i => \Mux0~0_combout\,
+	i => \ALT_INV_Mux0~0_combout\,
 	devoe => ww_devoe,
 	o => ww_HEX0(6));
 
@@ -457,13 +457,13 @@ PORT MAP (
 -- Location: MLABCELL_X84_Y8_N0
 \Mux6~0\ : cyclonev_lcell_comb
 -- Equation(s):
--- \Mux6~0_combout\ = ( \SW[1]~input_o\ & ( \SW[0]~input_o\ & ( (!\SW[2]~input_o\) # (\SW[3]~input_o\) ) ) ) # ( !\SW[1]~input_o\ & ( \SW[0]~input_o\ & ( (\SW[2]~input_o\) # (\SW[3]~input_o\) ) ) ) # ( \SW[1]~input_o\ & ( !\SW[0]~input_o\ ) ) # ( 
--- !\SW[1]~input_o\ & ( !\SW[0]~input_o\ & ( !\SW[3]~input_o\ $ (!\SW[2]~input_o\) ) ) )
+-- \Mux6~0_combout\ = ( \SW[1]~input_o\ & ( \SW[0]~input_o\ & ( (\SW[3]~input_o\ & !\SW[2]~input_o\) ) ) ) # ( !\SW[1]~input_o\ & ( \SW[0]~input_o\ & ( !\SW[3]~input_o\ $ (\SW[2]~input_o\) ) ) ) # ( !\SW[1]~input_o\ & ( !\SW[0]~input_o\ & ( (!\SW[3]~input_o\ 
+-- & \SW[2]~input_o\) ) ) )
 
 -- pragma translate_off
 GENERIC MAP (
 	extended_lut => "off",
-	lut_mask => "0011001111001100111111111111111100110011111111111111111100110011",
+	lut_mask => "0000000011001100000000000000000011001100001100110011001100000000",
 	shared_arith => "off")
 -- pragma translate_on
 PORT MAP (
@@ -476,13 +476,13 @@ PORT MAP (
 -- Location: MLABCELL_X84_Y8_N39
 \Mux5~0\ : cyclonev_lcell_comb
 -- Equation(s):
--- \Mux5~0_combout\ = ( \SW[1]~input_o\ & ( \SW[0]~input_o\ & ( !\SW[3]~input_o\ ) ) ) # ( !\SW[1]~input_o\ & ( \SW[0]~input_o\ & ( !\SW[2]~input_o\ $ (\SW[3]~input_o\) ) ) ) # ( \SW[1]~input_o\ & ( !\SW[0]~input_o\ & ( (!\SW[2]~input_o\ & !\SW[3]~input_o\) 
--- ) ) )
+-- \Mux5~0_combout\ = ( \SW[1]~input_o\ & ( \SW[0]~input_o\ & ( \SW[3]~input_o\ ) ) ) # ( !\SW[1]~input_o\ & ( \SW[0]~input_o\ & ( (\SW[2]~input_o\ & !\SW[3]~input_o\) ) ) ) # ( \SW[1]~input_o\ & ( !\SW[0]~input_o\ & ( \SW[2]~input_o\ ) ) ) # ( 
+-- !\SW[1]~input_o\ & ( !\SW[0]~input_o\ & ( (\SW[2]~input_o\ & \SW[3]~input_o\) ) ) )
 
 -- pragma translate_off
 GENERIC MAP (
 	extended_lut => "off",
-	lut_mask => "0000000000000000110000001100000011000011110000111111000011110000",
+	lut_mask => "0000001100000011001100110011001100110000001100000000111100001111",
 	shared_arith => "off")
 -- pragma translate_on
 PORT MAP (
@@ -495,13 +495,13 @@ PORT MAP (
 -- Location: MLABCELL_X84_Y8_N12
 \Mux4~0\ : cyclonev_lcell_comb
 -- Equation(s):
--- \Mux4~0_combout\ = ( \SW[1]~input_o\ & ( \SW[0]~input_o\ & ( !\SW[3]~input_o\ ) ) ) # ( !\SW[1]~input_o\ & ( \SW[0]~input_o\ & ( (!\SW[3]~input_o\) # (!\SW[2]~input_o\) ) ) ) # ( !\SW[1]~input_o\ & ( !\SW[0]~input_o\ & ( (!\SW[3]~input_o\ & 
+-- \Mux4~0_combout\ = ( \SW[1]~input_o\ & ( \SW[0]~input_o\ & ( (\SW[3]~input_o\ & \SW[2]~input_o\) ) ) ) # ( \SW[1]~input_o\ & ( !\SW[0]~input_o\ & ( !\SW[3]~input_o\ $ (\SW[2]~input_o\) ) ) ) # ( !\SW[1]~input_o\ & ( !\SW[0]~input_o\ & ( (\SW[3]~input_o\ & 
 -- \SW[2]~input_o\) ) ) )
 
 -- pragma translate_off
 GENERIC MAP (
 	extended_lut => "off",
-	lut_mask => "0000000011001100000000000000000011111111110011001100110011001100",
+	lut_mask => "0000000000110011110011000011001100000000000000000000000000110011",
 	shared_arith => "off")
 -- pragma translate_on
 PORT MAP (
@@ -533,13 +533,13 @@ PORT MAP (
 -- Location: MLABCELL_X84_Y8_N24
 \Mux2~0\ : cyclonev_lcell_comb
 -- Equation(s):
--- \Mux2~0_combout\ = ( \SW[1]~input_o\ & ( \SW[0]~input_o\ & ( (\SW[3]~input_o\ & \SW[2]~input_o\) ) ) ) # ( \SW[1]~input_o\ & ( !\SW[0]~input_o\ & ( !\SW[3]~input_o\ $ (\SW[2]~input_o\) ) ) ) # ( !\SW[1]~input_o\ & ( !\SW[0]~input_o\ & ( (\SW[3]~input_o\ & 
+-- \Mux2~0_combout\ = ( \SW[1]~input_o\ & ( \SW[0]~input_o\ & ( !\SW[3]~input_o\ ) ) ) # ( !\SW[1]~input_o\ & ( \SW[0]~input_o\ & ( (!\SW[3]~input_o\) # (!\SW[2]~input_o\) ) ) ) # ( !\SW[1]~input_o\ & ( !\SW[0]~input_o\ & ( (!\SW[3]~input_o\ & 
 -- \SW[2]~input_o\) ) ) )
 
 -- pragma translate_off
 GENERIC MAP (
 	extended_lut => "off",
-	lut_mask => "0000000000110011110011000011001100000000000000000000000000110011",
+	lut_mask => "0000000011001100000000000000000011111111110011001100110011001100",
 	shared_arith => "off")
 -- pragma translate_on
 PORT MAP (
@@ -552,13 +552,13 @@ PORT MAP (
 -- Location: MLABCELL_X84_Y8_N33
 \Mux1~0\ : cyclonev_lcell_comb
 -- Equation(s):
--- \Mux1~0_combout\ = ( \SW[1]~input_o\ & ( \SW[0]~input_o\ & ( \SW[3]~input_o\ ) ) ) # ( !\SW[1]~input_o\ & ( \SW[0]~input_o\ & ( (\SW[2]~input_o\ & !\SW[3]~input_o\) ) ) ) # ( \SW[1]~input_o\ & ( !\SW[0]~input_o\ & ( \SW[2]~input_o\ ) ) ) # ( 
--- !\SW[1]~input_o\ & ( !\SW[0]~input_o\ & ( (\SW[2]~input_o\ & \SW[3]~input_o\) ) ) )
+-- \Mux1~0_combout\ = ( \SW[1]~input_o\ & ( \SW[0]~input_o\ & ( !\SW[3]~input_o\ ) ) ) # ( !\SW[1]~input_o\ & ( \SW[0]~input_o\ & ( !\SW[2]~input_o\ $ (\SW[3]~input_o\) ) ) ) # ( \SW[1]~input_o\ & ( !\SW[0]~input_o\ & ( (!\SW[2]~input_o\ & !\SW[3]~input_o\) 
+-- ) ) )
 
 -- pragma translate_off
 GENERIC MAP (
 	extended_lut => "off",
-	lut_mask => "0000001100000011001100110011001100110000001100000000111100001111",
+	lut_mask => "0000000000000000110000001100000011000011110000111111000011110000",
 	shared_arith => "off")
 -- pragma translate_on
 PORT MAP (
@@ -571,13 +571,13 @@ PORT MAP (
 -- Location: MLABCELL_X84_Y8_N6
 \Mux0~0\ : cyclonev_lcell_comb
 -- Equation(s):
--- \Mux0~0_combout\ = ( \SW[1]~input_o\ & ( \SW[0]~input_o\ & ( (\SW[3]~input_o\ & !\SW[2]~input_o\) ) ) ) # ( !\SW[1]~input_o\ & ( \SW[0]~input_o\ & ( !\SW[3]~input_o\ $ (\SW[2]~input_o\) ) ) ) # ( !\SW[1]~input_o\ & ( !\SW[0]~input_o\ & ( (!\SW[3]~input_o\ 
--- & \SW[2]~input_o\) ) ) )
+-- \Mux0~0_combout\ = ( \SW[1]~input_o\ & ( \SW[0]~input_o\ & ( (!\SW[2]~input_o\) # (\SW[3]~input_o\) ) ) ) # ( !\SW[1]~input_o\ & ( \SW[0]~input_o\ & ( (\SW[2]~input_o\) # (\SW[3]~input_o\) ) ) ) # ( \SW[1]~input_o\ & ( !\SW[0]~input_o\ ) ) # ( 
+-- !\SW[1]~input_o\ & ( !\SW[0]~input_o\ & ( !\SW[3]~input_o\ $ (!\SW[2]~input_o\) ) ) )
 
 -- pragma translate_off
 GENERIC MAP (
 	extended_lut => "off",
-	lut_mask => "0000000011001100000000000000000011001100001100110011001100000000",
+	lut_mask => "0011001111001100111111111111111100110011111111111111111100110011",
 	shared_arith => "off")
 -- pragma translate_on
 PORT MAP (
