@@ -8,11 +8,7 @@ Given task in lab 1:
 #### a) Switches and LEDs
 
 - [x] Create a new Quartus project
-<<<<<<< HEAD
 - [x] Create a new VHDL file
-=======
-- [ ] Create a new VHDL file
->>>>>>> c056455d728cc365191de2392cc257d0dfd9973d
 - [ ] Create tcl scripting file and make pin assignments
 - [ ] Create and import pin settings
 - [ ] Compile the project and program the FPGA
@@ -37,7 +33,7 @@ Given task in lab 1:
 #### a)
 
 The vhdl - file for lab1:
-'''
+```
 library IEEE;
 use IEEE.std_logic_1164.all;
 
@@ -54,7 +50,6 @@ begin
   LED(9 downto 0) <= SW(9 downto 0);
 
 end architecture top_level;
-
-'''
+```
 
 
