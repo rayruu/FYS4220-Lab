@@ -1,0 +1,18 @@
+M:/pc/Dokumenter/FYS4220/fys4220-personal/hdl/tb/tb_lab1.vhd {1 {vcom -work work -2002 -explicit -stats=none M:/pc/Dokumenter/FYS4220/fys4220-personal/hdl/tb/tb_lab1.vhd
+Model Technology ModelSim ALTERA vcom 10.4d Compiler 2015.12 Dec 30 2015
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity tb_lab1
+-- Compiling architecture testbench of tb_lab1
+
+} {} {}} M:/pc/Dokumenter/FYS4220/fys4220-personal/hdl/lab1.vhd {1 {vcom -work work -2002 -explicit -stats=none M:/pc/Dokumenter/FYS4220/fys4220-personal/hdl/lab1.vhd
+Model Technology ModelSim ALTERA vcom 10.4d Compiler 2015.12 Dec 30 2015
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity lab1
+-- Compiling architecture top_level of lab1
+
+} {} {}}

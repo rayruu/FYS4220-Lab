@@ -23,5 +23,14 @@ set_location_assignment PIN_W20 -to LED[7]
 set_location_assignment PIN_W21 -to LED[8]
 set_location_assignment PIN_Y21 -to LED[9]
 
+#Seven segment display
+set_location_assignment PIN_AE26 -to HEX0[0]
+set_location_assignment PIN_AE27 -to HEX0[1]
+set_location_assignment PIN_AE28 -to HEX0[2]
+set_location_assignment PIN_AG27 -to HEX0[3]
+set_location_assignment PIN_AF28 -to HEX0[4]
+set_location_assignment PIN_AG28 -to HEX0[5]
+set_location_assignment PIN_AH28 -to HEX0[6]
+
 #To avoid that the FPGA is driving an unintended value on pins that are not in use:
 set_global_assignment -name RESERVE_ALL_UNUSED_PINS "AS INPUT TRI-STATED"

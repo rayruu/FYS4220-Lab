@@ -1,0 +1,90 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/altera_lite/16.0
+Elab1
+Z0 w1473257659
+Z1 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z2 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+Z3 dM:/pc/Dokumenter/FYS4220/fys4220-personal/simulation/modelsim
+Z4 8M:/pc/Dokumenter/FYS4220/fys4220-personal/hdl/lab1.vhd
+Z5 FM:/pc/Dokumenter/FYS4220/fys4220-personal/hdl/lab1.vhd
+l0
+L5
+Vm:<CdmWfiROkDkmgRV5f22
+!s100 k6L:_>4O]H;D4m3U?iL?H1
+Z6 OV;C;10.4d;61
+32
+Z7 !s110 1473258759
+!i10b 1
+Z8 !s108 1473258758.000000
+Z9 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|M:/pc/Dokumenter/FYS4220/fys4220-personal/hdl/lab1.vhd|
+Z10 !s107 M:/pc/Dokumenter/FYS4220/fys4220-personal/hdl/lab1.vhd|
+!i113 1
+Z11 o-work work -2002 -explicit
+Z12 tExplicit 1
+Atop_level
+R1
+R2
+DEx4 work 4 lab1 0 22 m:<CdmWfiROkDkmgRV5f22
+l14
+L13
+Vg0gHI3RW397F4RT`Q__aJ2
+!s100 i2KH7;ChUDMj]9C<ZJWB23
+R6
+32
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Etb_lab1
+Z13 w1473258520
+Z14 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
+R1
+R2
+R3
+Z15 8M:/pc/Dokumenter/FYS4220/fys4220-personal/hdl/tb/tb_lab1.vhd
+Z16 FM:/pc/Dokumenter/FYS4220/fys4220-personal/hdl/tb/tb_lab1.vhd
+l0
+L5
+VA]LC77TWnDa]oE0l^1@QK3
+!s100 ;4V=kZ__=6CVSb`g6]lmP3
+R6
+32
+Z17 !s110 1473258766
+!i10b 1
+Z18 !s108 1473258766.000000
+Z19 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|M:/pc/Dokumenter/FYS4220/fys4220-personal/hdl/tb/tb_lab1.vhd|
+Z20 !s107 M:/pc/Dokumenter/FYS4220/fys4220-personal/hdl/tb/tb_lab1.vhd|
+!i113 1
+R11
+R12
+Atestbench
+R14
+R1
+R2
+DEx4 work 7 tb_lab1 0 22 A]LC77TWnDa]oE0l^1@QK3
+l18
+L8
+VeUO3zXg1QmlH_4jdg1nIz2
+!s100 YUOR_[@D;ed2:_0[RZ2mP2
+R6
+32
+R17
+!i10b 1
+R18
+R19
+R20
+!i113 1
+R11
+R12
