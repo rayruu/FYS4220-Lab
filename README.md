@@ -8,7 +8,11 @@ Given task in lab 1:
 #### a) Switches and LEDs
 
 - [x] Create a new Quartus project
+<<<<<<< HEAD
 - [x] Create a new VHDL file
+=======
+- [ ] Create a new VHDL file
+>>>>>>> c056455d728cc365191de2392cc257d0dfd9973d
 - [ ] Create tcl scripting file and make pin assignments
 - [ ] Create and import pin settings
 - [ ] Compile the project and program the FPGA
